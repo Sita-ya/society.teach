@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>老街與生活｜試教互動網頁</title>
+<title>老街與生活｜社會四上 第三單元</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -329,7 +329,6 @@ body.notes #viewport{display:none}
 /* =====================================================================
    一、老師可自行修改的設定
    ===================================================================== */
-var TEACHER_NAME = "";   // 試教者姓名，例如 "王小明"
 
 /* 圖片上標記的位置（百分比，相對於圖片本身）。要微調位置只改這裡。 */
 var HOTSPOTS = {
@@ -355,7 +354,6 @@ var STATIONS = [
   { key: "b1", name: "騎樓與牌樓", cat: "建築", stamp: "建築", layout: "pair",
     images: ["sanxia-street.png", "building-facade.png"],
     level: "理解", question: "下雨天走在老街上，為什麼可以不撐傘？",
-    answers: [["小傑", "因為有走廊可以躲雨！"]],
     points: [
       "這種走廊叫做<b>騎樓</b>。三峽老街的騎樓有<b>連續的拱圈</b>。",
       "騎樓讓店面空間可以<b>向外延伸</b>，也可以<b>遮陽避雨</b>。",
@@ -371,7 +369,6 @@ var STATIONS = [
     image: "zushi-temple.png",
     level: "記憶", question: "三峽祖師廟供奉的是哪一位神明？",
     options: ["媽祖", "清水祖師", "土地公", "關公"], correct: [1],
-    answers: [["小美", "我覺得是 B，因為它叫「祖師」廟！"]],
     points: [
       "建於<b>西元 1769 年</b>，已經有<b>兩百多年</b>歷史。",
       "是三峽當地<b>信仰與社會活動的中心</b>。",
@@ -385,7 +382,6 @@ var STATIONS = [
   { key: "b3", name: "金牛角", cat: "特產", stamp: "特產", layout: "side",
     image: "golden-croissant.png",
     level: "推理", question: "這個麵包為什麼叫做「金牛角」？",
-    answers: [["小安", "因為它長得像牛的角！"], ["小宇", "因為它是金黃色的！"]],
     points: [
       "形狀像<b>牛角</b>，表皮<b>金黃</b>，口感<b>外酥內嫩</b>。",
       "是三峽有名的<b>特產</b>，很多人到老街會買來當<b>伴手禮</b>。",
@@ -406,7 +402,6 @@ var STATIONS = [
       "這裡有很多大型工廠",
       "這裡有高速公路"
     ], correct: [0, 1, 2],
-    answers: [["小志", "我選馬藍、三峽河和河運！"]],
     extra: "所以三峽成為當時重要的<b>染布集散地</b>，現在民權街上還保留了許多當時的<b>染坊建築</b>。",
     board: "藍染（馬藍、三峽河、河運）",
     focus: "藍染發展原因：馬藍產地、三峽河漂洗晒布、淡水河河運（萬華）",
@@ -422,13 +417,12 @@ var LESSON = [
     focus: "介紹課題", qs: [],
     notes: "開場：「各位同學好，今天我們要上第三單元第 2 課——老街與生活。」按下一頁，計時器自動從 0:00 開始。"
   },
-  { id: "p1", type: "spot", stage: 1, label: "引起動機", header: "引起動機｜找不同", steps: 5,
+  { id: "p1", type: "spot", stage: 1, label: "引起動機", header: "引起動機｜找不同", steps: 4,
     timer: { name: "引起動機", from: 0, to: 120 },
     image: "sanxia-street.png",
     level: "理解", question: "這條街，和你家附近的街道有什麼不一樣？",
-    answers: [["小華", "這裡的房子看起來好舊喔！"], ["小美", "房子前面有一個一個的拱門！"], ["小強", "都是紅色的磚頭！"]],
     tags: ["紅磚", "連續的拱門", "房子前面的走廊"],
-    reveal: "這裡是<b class='hl'>新北市三峽區的三峽老街</b>，課本 62 頁的同學們正在這裡參加導覽活動！",
+    reveal: "這裡是<b class='hl'>新北市三峽區的「三峽老街」</b>！<br>請翻開課本第 62 頁。",
     mission: "今天，大家要當「三峽老街小小導覽員」！集滿 4 個印章，就能完成導覽任務！",
     focus: "觀察三峽老街街景（紅磚、連續拱門、騎樓），引發興趣並建立導覽任務",
     qs: [["這條街，和你家附近的街道有什麼不一樣？", "理解"]],
@@ -440,12 +434,11 @@ var LESSON = [
     qs: [],
     notes: "「導覽員們，地圖上有 4 個站，每完成一站就能蓋一個章！」按下一步會依 ①→④ 進入站點，也可以直接點站點。每站約 1 分鐘。"
   },
-  { id: "form", type: "form", stage: 2, label: "發展活動二", header: "老街是怎麼來的？", steps: 7,
+  { id: "form", type: "form", stage: 2, label: "發展活動二", header: "老街是怎麼來的？", steps: 6,
     timer: { name: "發展二", from: 390, to: 570 },
     image: "early-market.png", cap: "圖 1　早期市集示意圖",
     question: "家鄉的老街，是怎麼形成的？",
     guide: "回想一下祖師廟。以前的小販，為什麼喜歡到廟的附近做生意？",
-    answers: [["小強", "因為去拜拜的人很多，東西比較好賣！"]],
     wiki: "<b>市集</b>：在固定的時間、地點，進行貨物買賣的場所。",
     cards: ["老街", "廟宇", "市集／商店街", "人潮聚集"],   // 卡片打亂後的順序
     order: [1, 3, 2, 0],                                     // 正確順序（對應上面 cards 的編號）
@@ -453,16 +446,14 @@ var LESSON = [
     sanxia: "三峽也是這樣！祖師廟附近的<b>三角湧街</b>，就是三峽早期的市集中心，後來成為今天的<b>三峽老街</b>。",
     focus: "老街的形成：廟宇 → 人潮聚集 → 市集／商店街 → 老街；認識「市集」",
     qs: [["家鄉的老街，是怎麼形成的？（課本 p.64 課前預習）", "理解"], ["以前的小販，為什麼喜歡到廟的附近做生意？", "推理"], ["排序挑戰：把老街形成的過程排出來", "推理"]],
-    notes: "步驟 3 複述：「對！拜拜的人多，東西就好賣。」排序挑戰：「請第二組的<b>小強</b>上台排排看。」老師自己拖曳，<b>故意先把「老街」放第一格</b>，按「檢查答案」後引導：「最早出現的是什麼？我們剛剛去的祖師廟在哪裡？」再修正。正解出現後全班一起念。"
+    notes: "學生回答後複述：「對！拜拜的人多，東西就好賣。」排序挑戰：「請第二組的<b>小強</b>上台排排看。」老師自己拖曳，<b>故意先把「老街」放第一格</b>，按「檢查答案」後引導：「最早出現的是什麼？我們剛剛去的祖師廟在哪裡？」再修正。正解出現後全班一起念。"
   },
-  { id: "house", type: "house", stage: 2, label: "發展活動三", header: "從市集到街屋", steps: 10,
+  { id: "house", type: "house", stage: 2, label: "發展活動三", header: "從市集到街屋", steps: 7,
     timer: { name: "發展三", from: 570, to: 780 },
     q1: "觀察圖 1 和圖 2，有哪些相同的地方？有哪些不同的地方？",
-    a1: [["小美", "兩張圖都有廟！"], ["小傑", "圖 1 是在路邊擺攤，圖 2 變成一間一間的房子了！"]],
     same: "<b>廟宇</b>一直都在。",
     diff: "早期是<b>攤販</b>，後來變成<b>住家和店面兼具的街屋</b>。",
     q2: "以前老街的老闆一家人，住在哪裡？",
-    a2: [["小安", "住在店的樓上！"], ["小宇", "住在店的後面！"]],
     parts: [
       ["店面與騎樓", "店面朝向街道做生意；騎樓讓顧客、行人遮陽避雨"],
       ["後方", "店家生活起居的地方"],
@@ -471,7 +462,6 @@ var LESSON = [
     sum: "前面做生意，後面和樓上生活",
     sumSub: "店鋪沿著道路兩旁蓋，老街是各種貨物交易的地方，顧客往來絡繹不絕。",
     q3: "觀察圖 2 街屋空間示意圖中的街屋空間，和現在的建築有什麼不同？",
-    a3: [["小志", "以前的房子比較矮！"], ["小華", "現在的大樓比較高！"]],
     table: [["樓層不多", "樓層比較多"], ["紅磚砌成", "多是鋼筋水泥"], ["有藝術雕刻", "線條比較簡單"]],
     focus: "比較早期市集與街屋；街屋空間「前店後住、樓上休息」；比較以前街屋與現在建築",
     qs: [["課本提問 1：觀察圖 1 和圖 2，有哪些相同、哪些不同？", "推理"], ["以前老街的老闆一家人，住在哪裡？", "理解"], ["課本提問 2：圖 2 的街屋和現在的建築有什麼不同？", "推理"]],
@@ -483,11 +473,11 @@ var LESSON = [
     qs: [],
     notes: "「我們來看今天的板書。」依序高亮三大區塊。請<b>全班一起念</b>：「廟宇 → 人潮聚集 → 市集／商店街 → 老街」。"
   },
-  { id: "quiz", type: "quiz", stage: 3, label: "綜合活動", header: "導覽員認證快問快答", steps: 7,
+  { id: "quiz", type: "quiz", stage: 3, label: "綜合活動", header: "導覽員認證快問快答", steps: 6,
     timer: { name: "綜合二", from: 840, to: 900 },
     q1: { text: "老街的形成常常和廟宇有關，因為廟宇是人們常聚集的地方。", ans: "O", why: "廟宇聚集人潮 → 小販來做生意 → 慢慢形成老街。" },
     q2: { image: "jincheng-arcade.png", text: "觀察圖 3，金城老街的店鋪設有騎樓，騎樓具有什麼樣的功能？",
-          answers: [["小強", "下雨可以躲雨！"]], ans: "供顧客、行人遮陽避雨。", more: "不只三峽，金門的金城老街也有騎樓喔！" },
+          ans: "供顧客、行人遮陽避雨。", more: "不只三峽，金門的金城老街也有騎樓喔！" },
     q3: { text: "以前三峽發展藍染，和三峽河、河運有關。", ans: "O", why: "三峽河可以漂洗、晒布；淡水河河運把布賣到萬華。" },
     finalTitle: "🎉 恭喜成為三峽老街小小導覽員！",
     homework: "問問家人：我們家鄉有沒有老街？那裡有什麼廟宇或特產？",
@@ -530,7 +520,7 @@ var STORE_KEY = "oldstreet-lesson-v1";
 function defaultState() {
   return { page: 0, step: 0, station: -1, stStep: 0,
     stamps: [false, false, false, false], scores: [0, 0, 0, 0], flags: {},
-    tStart: null, showScore: true, showTimer: true, bubbles: true };
+    tStart: null, showScore: true, showTimer: true };
 }
 var state = defaultState();
 var ui = { notes: false, modal: null, fresh: {} };
@@ -603,13 +593,11 @@ function fitFig(f) {
 }
 function fitAll() { var fs = pageEl.querySelectorAll(".fig"); for (var i = 0; i < fs.length; i++) fitFig(fs[i]); }
 
-function bubbles(arr, cls) {
-  return arr.map(function (a) { return '<div class="bubble ' + (cls || "") + '"><span class="tag0">學生可能回答</span><span class="who">' + a[0] + '：</span>' + a[1] + '</div>'; }).join(cls === "stack" ? "<br>" : "");
-}
 function head(P, title, extra) {
   return '<div class="head">' + (P.label ? '<span class="pill">' + P.label + '</span>' : "") + '<h1>' + (title || P.header) + '</h1>' + (extra || "") + '</div>';
 }
-function qhtml(text, level, cls) { return '<div class="q ' + (cls || "") + '">' + text + (level ? '<span class="lv">' + level + '</span>' : "") + '</div>'; }
+// 提問層次（記憶／理解／推理／評鑑）只寫在教案與講稿，不顯示在學生畫面上
+function qhtml(text, level, cls) { return '<div class="q ' + (cls || "") + '">' + text + '</div>'; }
 
 /* =====================================================================
    五、各頁渲染
@@ -620,19 +608,18 @@ RENDER.cover = function (P) {
   return fig(P.image, { cls: "cover-fig", style: "left:0;top:0;width:1920px;height:1080px" }) +
     '<div class="cover-mask"></div>' +
     '<div class="cover-box"><h1>' + P.title + '</h1><div class="line"></div><div class="sub">' + P.sub + '</div>' +
-    '<div class="who">試教者：' + (TEACHER_NAME ? TEACHER_NAME : "＿＿＿＿") + '</div></div>' +
+    '</div>' +
     '<div class="cover-hint">按 → 或空白鍵開始　｜　按 ? 查看快捷鍵</div>';
 };
 
 RENDER.spot = function (P) {
-  var tags = P.tags.map(function (t, i) { return '<span class="rv tag" data-s="3" style="transition-delay:' + (i * 260) + 'ms">' + t + '</span>'; }).join("");
+  var tags = P.tags.map(function (t, i) { return '<span class="rv tag" data-s="2" style="transition-delay:' + (i * 260) + 'ms">' + t + '</span>'; }).join("");
   return head(P) + '<div class="body">' +
-    '<div class="ab rv" data-s="1" style="left:0;top:0;width:1760px">' + qhtml(P.question, P.level) + '</div>' +
-    fig(P.image, { style: "left:0;top:84px;width:1760px;height:440px" }) +
-    '<div class="ab rv" data-s="2" style="left:0;top:542px;width:1760px">' + bubbles(P.answers) + '</div>' +
-    '<div class="ab" style="left:0;top:624px;width:1760px"><span class="rv tag-lead" data-s="3">我們的觀察：</span>' + tags + '</div>' +
-    '<div class="ab rv" data-s="4" style="left:0;top:712px;width:840px;font-size:32px">' + P.reveal + '</div>' +
-    '<div class="ab rv pop mission" data-s="5" style="left:890px;top:704px;width:870px">' + STAMP_ICON + '<div>' + P.mission + '</div></div>' +
+    '<div class="ab rv" data-s="1" style="left:0;top:0;width:1760px">' + qhtml(P.question) + '</div>' +
+    fig(P.image, { style: "left:0;top:84px;width:1760px;height:470px" }) +
+    '<div class="ab" style="left:0;top:582px;width:1760px"><span class="rv tag-lead" data-s="2">我們的觀察：</span>' + tags + '</div>' +
+    '<div class="ab rv" data-s="3" style="left:0;top:688px;width:840px;font-size:34px">' + P.reveal + '</div>' +
+    '<div class="ab rv pop mission" data-s="4" style="left:890px;top:680px;width:870px">' + STAMP_ICON + '<div>' + P.mission + '</div></div>' +
     '</div>';
 };
 
@@ -690,103 +677,96 @@ RENDER.map = function (P) {
     '</div></div>';
 };
 
+var ST_LAST = 2;   // 站點：步驟 1 提問、步驟 2 揭曉答案；再按一次就蓋章
 var STATION_LAYOUT = {
   pair: function (st) {
     return fig(st.images[0], { style: "left:0;top:0;width:1100px;height:370px" }) +
       fig(st.images[1], { style: "left:1130px;top:0;width:630px;height:370px" }) +
-      '<div class="ab rv" data-s="1" style="left:0;top:395px;width:1760px">' + qhtml(st.question, st.level) + '</div>' +
-      '<div class="ab rv" data-s="2" style="left:0;top:478px;width:1760px">' + bubbles(st.answers) + '</div>' +
-      '<div class="ab rv" data-s="3" style="left:0;top:560px;width:1760px"><ul class="points grid2">' + st.points.map(function (p) { return "<li>" + p + "</li>"; }).join("") + '</ul></div>';
+      '<div class="ab rv" data-s="1" style="left:0;top:405px;width:1760px">' + qhtml(st.question) + '</div>' +
+      '<div class="ab rv" data-s="2" style="left:0;top:500px;width:1760px"><ul class="points grid2">' + st.points.map(function (p) { return "<li>" + p + "</li>"; }).join("") + '</ul></div>';
   },
   choice: function (st) {
     var opts = st.options.map(function (o, i) { return '<div class="opt" data-o="' + i + '"><span class="ol">' + "ABCD"[i] + '</span>' + o + CHECK + '</div>'; }).join("");
     return fig(st.image, { style: "left:0;top:0;width:1760px;height:350px" }) +
-      '<div class="ab rv" data-s="1" style="left:0;top:370px;width:1760px">' + qhtml(st.question, st.level) + '</div>' +
-      '<div class="ab rv opts4" data-s="1" style="left:0;top:450px;width:1760px">' + opts + '</div>' +
-      '<div class="ab rv" data-s="2" style="left:0;top:572px;width:1760px">' + bubbles(st.answers) + '</div>' +
-      '<div class="ab rv" data-s="3" style="left:0;top:650px;width:1340px"><ul class="points">' + st.points.map(function (p) { return "<li>" + p + "</li>"; }).join("") + '</ul></div>';
+      '<div class="ab rv" data-s="1" style="left:0;top:375px;width:1760px">' + qhtml(st.question) + '</div>' +
+      '<div class="ab rv opts4" data-s="1" style="left:0;top:460px;width:1760px">' + opts + '</div>' +
+      '<div class="ab rv" data-s="2" style="left:0;top:610px;width:1340px"><ul class="points">' + st.points.map(function (p) { return "<li>" + p + "</li>"; }).join("") + '</ul></div>';
   },
   side: function (st) {
     return fig(st.image, { style: "left:0;top:0;width:780px;height:760px", cls: "top" }) +
-      '<div class="ab rv" data-s="1" style="left:840px;top:0;width:920px">' + qhtml(st.question, st.level) + '</div>' +
-      '<div class="ab rv" data-s="2" style="left:840px;top:110px;width:920px">' + bubbles(st.answers, "stack") + '</div>' +
-      '<div class="ab rv" data-s="3" style="left:840px;top:290px;width:920px"><ul class="points">' + st.points.map(function (p) { return "<li>" + p + "</li>"; }).join("") + '</ul></div>';
+      '<div class="ab rv" data-s="1" style="left:840px;top:0;width:920px">' + qhtml(st.question) + '</div>' +
+      '<div class="ab rv" data-s="2" style="left:840px;top:150px;width:920px"><ul class="points">' + st.points.map(function (p) { return "<li>" + p + "</li>"; }).join("") + '</ul></div>';
   },
   multi: function (st) {
     var opts = st.options.map(function (o, i) { return '<div class="opt" data-o="' + i + '"><span class="box"></span>' + o + '</div>'; }).join("");
     return fig(st.image, { style: "left:0;top:0;width:600px;height:640px", cls: "top" }) +
-      '<div class="ab rv" data-s="1" style="left:650px;top:0;width:1110px">' + qhtml(st.question, st.level, "sm") + '</div>' +
+      '<div class="ab rv" data-s="1" style="left:650px;top:0;width:1110px">' + qhtml(st.question, null, "sm") + '</div>' +
       '<div class="ab rv optlist" data-s="1" style="left:650px;top:80px;width:1110px">' + opts + '</div>' +
-      '<div class="ab rv" data-s="2" style="left:650px;top:520px;width:1110px">' + bubbles(st.answers) + '</div>' +
-      '<div class="ab rv" data-s="3" style="left:650px;top:600px;width:1110px;font-size:30px">' + st.extra.replace(/<b>/g, "<b class='hl'>") + '</div>';
+      '<div class="ab rv" data-s="2" style="left:650px;top:560px;width:1110px;font-size:30px">' + st.extra.replace(/<b>/g, "<b class='hl'>") + '</div>';
   }
 };
 
 function stationHTML(P, st, i) {
   return head(P, "導覽站 " + NUMS[i] + " " + st.name, '<span class="chip">' + st.cat + '</span><button class="backmap">← 回到地圖</button>') +
     '<div class="body">' + STATION_LAYOUT[st.layout](st) +
-    '<button class="ab rv pop stampbtn" data-s="3" style="right:0;bottom:0">' + STAMP_MINI + '蓋章，回到地圖</button></div>';
+    '<button class="ab rv pop stampbtn" data-s="' + ST_LAST + '" style="right:0;bottom:0">' + STAMP_MINI + '蓋章，回到地圖</button></div>';
 }
 
 RENDER.form = function (P) {
   return head(P) + '<div class="body">' +
     // 場景 A：步驟 1–4
-    '<div class="ab scene" data-s="0" data-e="4" style="left:0;top:0;width:1760px;height:850px">' +
+    '<div class="ab scene" data-s="0" data-e="3" style="left:0;top:0;width:1760px;height:850px">' +
       fig(P.image, { style: "left:0;top:0;width:1000px;height:820px", cap: P.cap, s: 1, cls: "rv top" }) +
-      '<div class="ab rv" data-s="1" style="left:1050px;top:0;width:710px">' + qhtml(P.question, "理解") + '<div class="hint" style="margin:6px 0 0 32px">課本 p.64 課前預習</div></div>' +
-      '<div class="ab rv" data-s="2" style="left:1050px;top:170px;width:710px">' + qhtml(P.guide, "推理", "sm") + '</div>' +
-      '<div class="ab rv" data-s="3" style="left:1050px;top:350px;width:710px">' + bubbles(P.answers) + '</div>' +
-      '<div class="ab rv pop wiki" data-s="4" style="left:1050px;top:460px;width:710px"><span class="wt">小百科</span><div class="wb">' + P.wiki + '</div></div>' +
+      '<div class="ab rv" data-s="1" style="left:1050px;top:0;width:710px">' + qhtml(P.question) + '<div class="hint" style="margin:6px 0 0 32px">課本 p.64 課前預習</div></div>' +
+      '<div class="ab rv" data-s="2" style="left:1050px;top:170px;width:710px">' + qhtml(P.guide, null, "sm") + '</div>' +
+      '<div class="ab rv pop wiki" data-s="3" style="left:1050px;top:380px;width:710px"><span class="wt">小百科</span><div class="wb">' + P.wiki + '</div></div>' +
     '</div>' +
     // 場景 B：步驟 5–7 排序挑戰
-    '<div class="ab scene" data-s="5" data-e="7" style="left:0;top:0;width:1760px;height:850px">' +
-      '<div class="ab" style="left:0;top:0;width:1760px">' + qhtml("排序挑戰：老街是怎麼一步一步形成的？", "推理") + '</div>' +
+    '<div class="ab scene" data-s="4" data-e="6" style="left:0;top:0;width:1760px;height:850px">' +
+      '<div class="ab" style="left:0;top:0;width:1760px">' + qhtml("排序挑戰：老街是怎麼一步一步形成的？") + '</div>' +
       '<div class="ab slots" id="slots" style="left:0;top:100px;width:1760px;height:150px"></div>' +
-      '<div class="ab rv" data-s="5" data-e="5" style="left:0;top:290px;width:1760px">' +
+      '<div class="ab rv" data-s="4" data-e="4" style="left:0;top:290px;width:1760px">' +
         '<div class="pool" id="pool"></div>' +
         '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px">' +
           '<span class="hint">用滑鼠把卡片拖到格子裡；也可以先點卡片、再點格子。</span>' +
           '<span><span class="msg-ok" id="sortMsg"></span>　<button class="btn ghostbtn" id="btnShuffle">重來</button>　<button class="btn" id="btnCheck">檢查答案</button></span>' +
         '</div></div>' +
-      '<div class="ab rv card-soft" data-s="6" style="left:0;top:300px;width:1760px;font-size:32px">' + P.explain + '</div>' +
-      '<div class="ab rv pop wiki" data-s="7" style="left:0;top:500px;width:1760px;border-color:var(--brick)"><span class="wt" style="background:var(--brick)">連結三峽</span><div class="wb">' + P.sanxia + '</div></div>' +
+      '<div class="ab rv card-soft" data-s="5" style="left:0;top:300px;width:1760px;font-size:32px">' + P.explain + '</div>' +
+      '<div class="ab rv pop wiki" data-s="6" style="left:0;top:500px;width:1760px;border-color:var(--brick)"><span class="wt" style="background:var(--brick)">連結三峽</span><div class="wb">' + P.sanxia + '</div></div>' +
     '</div></div>';
 };
 
 RENDER.house = function (P) {
   var hs = HOTSPOTS.shophouse.map(function (h, i) {
-    return '<div class="hs rv" data-s="6" style="left:' + h.left + '%;top:' + h.top + '%;transition-delay:' + (i * 450) + 'ms">' + h.n + '</div>';
+    return '<div class="hs rv" data-s="4" style="left:' + h.left + '%;top:' + h.top + '%;transition-delay:' + (i * 450) + 'ms">' + h.n + '</div>';
   }).join("");
   var parts = P.parts.map(function (p, i) {
-    return '<div class="it rv" data-s="6" style="transition-delay:' + (i * 450) + 'ms"><span class="n">' + (i + 1) + '</span><div><b class="hl">' + p[0] + '</b>：' + p[1] + '</div></div>';
+    return '<div class="it rv" data-s="4" style="transition-delay:' + (i * 450) + 'ms"><span class="n">' + (i + 1) + '</span><div><b class="hl">' + p[0] + '</b>：' + p[1] + '</div></div>';
   }).join("");
   var rows = P.table.map(function (r) { return "<tr><td>" + r[0] + "</td><td>" + r[1] + "</td></tr>"; }).join("");
   var badge = '<span class="badge">課本提問</span>';
   return head(P) + '<div class="body">' +
     // 第一部分
-    '<div class="ab scene" data-s="0" data-e="3" style="left:0;top:0;width:1760px;height:850px">' +
-      fig("early-market.png", { style: "left:0;top:0;width:860px;height:470px", cap: "圖 1　早期市集示意圖" }) +
-      fig("shophouse.png", { style: "left:900px;top:0;width:860px;height:470px", cap: "圖 2　老街的街屋空間示意圖" }) +
-      '<div class="ab rv" data-s="1" style="left:0;top:500px;width:1760px">' + qhtml('<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 1</span>' + P.q1, "推理") + '</div>' +
-      '<div class="ab rv" data-s="2" style="left:0;top:582px;width:1760px">' + bubbles(P.a1) + '</div>' +
-      '<div class="ab rv cmp grid2" data-s="3" style="left:0;top:672px;width:1760px">' +
+    '<div class="ab scene" data-s="0" data-e="2" style="left:0;top:0;width:1760px;height:850px">' +
+      fig("early-market.png", { style: "left:0;top:0;width:860px;height:480px", cap: "圖 1　早期市集示意圖" }) +
+      fig("shophouse.png", { style: "left:900px;top:0;width:860px;height:480px", cap: "圖 2　老街的街屋空間示意圖" }) +
+      '<div class="ab rv" data-s="1" style="left:0;top:520px;width:1760px">' + qhtml('<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 1</span>' + P.q1) + '</div>' +
+      '<div class="ab rv cmp grid2" data-s="2" style="left:0;top:630px;width:1760px">' +
         '<div class="card-soft"><span class="ct" style="background:var(--indigo)">相同</span><div class="cb">' + P.same.replace(/<b>/g, "<b class='hl'>") + '</div></div>' +
         '<div class="card-soft"><span class="ct" style="background:var(--brick)">不同</span><div class="cb">' + P.diff.replace(/<b>/g, "<b class='hl'>") + '</div></div>' +
       '</div></div>' +
     // 第二部分
-    '<div class="ab scene" data-s="4" data-e="7" style="left:0;top:0;width:1760px;height:850px">' +
+    '<div class="ab scene" data-s="3" data-e="5" style="left:0;top:0;width:1760px;height:850px">' +
       fig("shophouse.png", { style: "left:0;top:0;width:1120px;height:600px", hs: hs, cls: "top" }) +
-      '<div class="ab rv" data-s="4" style="left:1160px;top:0;width:600px">' + qhtml(P.q2, "理解", "sm") + '</div>' +
-      '<div class="ab rv" data-s="5" style="left:1160px;top:120px;width:600px">' + bubbles(P.a2, "stack") + '</div>' +
-      '<div class="ab list3" style="left:1160px;top:270px;width:600px">' + parts + '</div>' +
-      '<div class="ab rv pop" data-s="7" style="left:0;top:640px;width:1760px;text-align:center"><div class="big-sum">' + P.sum + '</div><div style="font-size:30px;color:#5C5C5C;margin-top:6px">' + P.sumSub + '</div></div>' +
+      '<div class="ab rv" data-s="3" style="left:1160px;top:0;width:600px">' + qhtml(P.q2, null, "sm") + '</div>' +
+      '<div class="ab list3" style="left:1160px;top:170px;width:600px">' + parts + '</div>' +
+      '<div class="ab rv pop" data-s="5" style="left:0;top:640px;width:1760px;text-align:center"><div class="big-sum">' + P.sum + '</div><div style="font-size:30px;color:#5C5C5C;margin-top:6px">' + P.sumSub + '</div></div>' +
     '</div>' +
     // 第三部分
-    '<div class="ab scene" data-s="8" data-e="10" style="left:0;top:0;width:1760px;height:850px">' +
-      '<div class="ab rv" data-s="8" style="left:0;top:0;width:1760px">' + qhtml('<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 2</span>' + P.q3, "推理", "sm") + '</div>' +
-      fig("shophouse.png", { style: "left:0;top:130px;width:820px;height:520px", cap: "圖 2　老街的街屋空間示意圖" }) +
-      '<div class="ab rv" data-s="9" style="left:870px;top:130px;width:890px">' + bubbles(P.a3) + '</div>' +
-      '<div class="ab rv pop" data-s="10" style="left:870px;top:290px;width:890px"><table class="cmpt"><tr><th>以前的街屋</th><th>現在的建築</th></tr>' + rows + '</table></div>' +
+    '<div class="ab scene" data-s="6" data-e="7" style="left:0;top:0;width:1760px;height:850px">' +
+      '<div class="ab rv" data-s="6" style="left:0;top:0;width:1760px">' + qhtml('<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 2</span>' + P.q3, null, "sm") + '</div>' +
+      fig("shophouse.png", { style: "left:0;top:130px;width:820px;height:560px", cap: "圖 2　老街的街屋空間示意圖" }) +
+      '<div class="ab rv pop" data-s="7" style="left:870px;top:160px;width:890px"><table class="cmpt"><tr><th>以前的街屋</th><th>現在的建築</th></tr>' + rows + '</table></div>' +
     '</div></div>';
 };
 
@@ -831,14 +811,13 @@ RENDER.quiz = function (P) {
   var q2 = P.q2;
   return head(P) + '<div class="body">' +
     tf(P.q1, 1, 0) +
-    '<div class="ab scene" data-s="2" data-e="4" style="left:0;top:0;width:1760px;height:850px">' +
+    '<div class="ab scene" data-s="2" data-e="3" style="left:0;top:0;width:1760px;height:850px">' +
       fig(q2.image, { style: "left:0;top:0;width:900px;height:830px" }) +
-      '<div class="ab" style="left:950px;top:0;width:810px"><div class="qno"><span class="badge" style="margin:0;font-size:22px">課本提問 3</span>　第 2 題｜遷移題</div>' + qhtml(q2.text, "推理") + '</div>' +
-      '<div class="ab rv" data-s="3" style="left:950px;top:260px;width:810px">' + bubbles(q2.answers) + '</div>' +
-      '<div class="ab rv pop card-soft" data-s="4" style="left:950px;top:360px;width:810px;border-color:var(--ok);background:var(--ok-l)"><div style="font-size:38px;font-weight:700;color:var(--ok)">' + q2.ans + '</div><div style="font-size:30px;margin-top:10px">' + q2.more + '</div></div>' +
+      '<div class="ab" style="left:950px;top:0;width:810px"><div class="qno"><span class="badge" style="margin:0;font-size:22px">課本提問 3</span>　第 2 題</div>' + qhtml(q2.text) + '</div>' +
+      '<div class="ab rv pop card-soft" data-s="3" style="left:950px;top:300px;width:810px;border-color:var(--ok);background:var(--ok-l)"><div style="font-size:38px;font-weight:700;color:var(--ok)">' + q2.ans + '</div><div style="font-size:30px;margin-top:10px">' + q2.more + '</div></div>' +
     '</div>' +
-    tf(P.q3, 3, 5) +
-    '<div class="ab scene" data-s="7" data-e="7" style="left:0;top:0;width:1760px;height:850px">' +
+    tf(P.q3, 3, 4) +
+    '<div class="ab scene" data-s="6" data-e="6"style="left:0;top:0;width:1760px;height:850px">' +
       '<div class="final-t pop on" style="margin-top:10px">' + P.finalTitle + '</div>' +
       '<div class="ab scores" id="finalScores" style="left:120px;top:250px;width:1520px"></div>' +
       '<div class="ab homework" style="left:120px;top:640px;width:1520px"><span class="hl2">回家任務</span>' + P.homework + '</div>' +
@@ -867,17 +846,17 @@ HOOKS.map = function (s) {
   var sel = optSel[state.station] || {};
   for (var i = 0; i < opts.length; i++) {
     var o = opts[i], good = st.correct.indexOf(i) >= 0;
-    o.classList.toggle("sel", !!sel[i] && s < 3);
+    o.classList.toggle("sel", !!sel[i] && s < ST_LAST);
     o.classList.remove("ok", "right", "dim");
-    if (s >= 3) o.classList.add(good ? (st.layout === "choice" ? "ok" : "right") : "dim");
+    if (s >= ST_LAST) o.classList.add(good ? (st.layout === "choice" ? "ok" : "right") : "dim");
   }
 };
 HOOKS.form = function (s) {
-  if (s >= 6 && !sortS.revealed) { sortS.revealed = true; sortS.slots = LESSON[state.page].order.slice(); sortS.pool = []; sortS.marks = ["lit", "lit", "lit", "lit"]; sortS.sel = null; renderSort(true); }
-  else if (s < 6 && sortS.revealed) { resetSort(); }
-  if (s >= 6) addBoard("form");
+  if (s >= 5 && !sortS.revealed) { sortS.revealed = true; sortS.slots = LESSON[state.page].order.slice(); sortS.pool = []; sortS.marks = ["lit", "lit", "lit", "lit"]; sortS.sel = null; renderSort(true); }
+  else if (s < 5 && sortS.revealed) { resetSort(); }
+  if (s >= 5) addBoard("form");
 };
-HOOKS.house = function (s) { if (s >= 7) addBoard("house"); };
+HOOKS.house = function (s) { if (s >= 5) addBoard("house"); };
 HOOKS.summary = function (s) {
   var bb = $("bigboard"); if (!bb) return;
   bb.classList.toggle("hiliting", s > 0);
@@ -886,7 +865,7 @@ HOOKS.summary = function (s) {
 };
 HOOKS.quiz = function (s) {
   var P = cur();
-  [[1, P.q1, 1], [3, P.q3, 6]].forEach(function (a) {
+  [[1, P.q1, 1], [3, P.q3, 5]].forEach(function (a) {
     var cards = pageEl.querySelectorAll('.ox[data-q="' + a[0] + '"]');
     for (var i = 0; i < cards.length; i++) {
       var c = cards[i], v = c.getAttribute("data-v");
@@ -895,7 +874,7 @@ HOOKS.quiz = function (s) {
       c.classList.toggle("dim", s >= a[2] && v !== a[1].ans);
     }
   });
-  if (s >= 7) renderFinalScores();
+  if (s >= 6) renderFinalScores();
 };
 function renderFinalScores() {
   var el = $("finalScores"); if (!el) return;
@@ -959,11 +938,12 @@ function checkSort() {
 
 /* 自製拖曳：mousedown / mousemove / mouseup */
 var drag = null;
+var SORT_STEP = 4;   // 第 3 頁排序挑戰所在的步驟
 function toStage(e) { var r = stage.getBoundingClientRect(); return { x: (e.clientX - r.left) / scale, y: (e.clientY - r.top) / scale }; }
 pageEl.addEventListener("mousedown", function (e) {
   if (e.button !== 0) return;
   var c = e.target.closest(".card");
-  if (!c || cur().id !== "form" || state.step !== 5) return;
+  if (!c || cur().id !== "form" || state.step !== SORT_STEP) return;
   e.preventDefault();
   drag = { id: +c.getAttribute("data-id"), el: c, sx: e.clientX, sy: e.clientY, moved: false };
 });
@@ -1044,7 +1024,7 @@ function addScore(i, d) {
   state.scores[i] = Math.max(0, state.scores[i] + d);
   var el = $("ts" + i);
   if (el) { el.textContent = state.scores[i]; el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump"); }
-  if (cur().type === "quiz" && state.step >= 7) renderFinalScores();
+  if (cur().type === "quiz" && state.step >= 6) renderFinalScores();
   save();
 }
 function addBoard(key) {
@@ -1065,7 +1045,6 @@ function renderNotes() {
 function applyToggles() {
   $("score").classList.toggle("hide", !state.showScore);
   $("timer").classList.toggle("hide", !state.showTimer);
-  document.body.classList.toggle("nob", !state.bubbles);
   $("noteStrip").classList.toggle("show", ui.notes);
 }
 
@@ -1107,7 +1086,7 @@ function next() {
   var P = cur();
   if (P.type === "map") {
     if (state.station >= 0) {
-      if (state.stStep < 3) { state.stStep++; applySteps(); } else completeStation();
+      if (state.stStep < ST_LAST) { state.stStep++; applySteps(); } else completeStation();
     } else {
       var n = state.stamps.indexOf(false);
       if (n >= 0) openStation(n); else goPage(state.page + 1);
@@ -1147,7 +1126,7 @@ function doReset() {
 function showHelp() {
   var k = [["→ / 空白 / PageDown", "下一步（全部揭曉後換頁）"], ["← / PageUp", "上一步"], ["Home", "回到封面"], ["1 2 3 4", "幫該組加 1 分"],
     ["點組名", "+1（Shift+點 −1）"], ["S", "顯示／隱藏加分板"], ["T", "顯示／隱藏計時器"], ["0", "計時器歸零重新開始"],
-    ["B", "開／關電子板書"], ["A", "顯示／隱藏學生可能回答"], ["N", "教師提示字條"], ["P", "講稿總表（可列印）"],
+    ["B", "開／關電子板書"], ["N", "教師提示字條"], ["P", "講稿總表（可列印）"],
     ["F", "全螢幕"], ["R", "重置全部"], ["?", "這個說明"], ["Esc", "關閉視窗"]];
   openModal('<h2>快捷鍵</h2><div class="keys">' + k.map(function (x) { return "<div><kbd>" + x[0] + "</kbd>" + x[1] + "</div>"; }).join("") + '</div><div class="mbtns"><button data-act="cancel">關閉（Esc）</button></div>', closeModal);
 }
@@ -1172,7 +1151,7 @@ function buildNotesView() {
   });
   $("notesView").innerHTML =
     '<div class="tools"><button onclick="window.print()">列印（A4 直式）</button><button onclick="closeNotesView()">回到上課畫面（Esc）</button></div>' +
-    '<h1>老街與生活｜15 分鐘試教講稿總表</h1><div class="meta">康軒社會四上 第三單元 第 2 課（課本 p.62–65）　試教者：' + (TEACHER_NAME || "＿＿＿＿") + '</div>' +
+    '<h1>老街與生活｜15 分鐘試教講稿總表</h1><div class="meta">康軒社會四上 第三單元 第 2 課（課本 p.62–65）</div>' +
     '<div class="flow"><div><b>引起動機</b> 0:00–2:00（2 分）<br>找不同：三峽老街街景</div><div><b>發展活動</b> 2:00–13:00（11 分）<br>導覽地圖 4 站／老街形成／街屋空間</div><div><b>綜合活動</b> 13:00–15:00（2 分）<br>板書總結／快問快答</div></div>' +
     '<table><thead><tr><th style="width:11%">頁次</th><th style="width:8%">階段</th><th style="width:9%">建議時間</th><th style="width:19%">教學重點</th><th style="width:25%">提問（層次）</th><th>教師提示</th></tr></thead><tbody>' + rows + '</tbody></table>';
 }
@@ -1203,7 +1182,6 @@ document.addEventListener("keydown", function (e) {
     case "t": state.showTimer = !state.showTimer; applyToggles(); save(); break;
     case "0": state.tStart = Date.now(); updateTimer(); save(); toast("計時器歸零"); break;
     case "b": $("board").classList.toggle("open"); $("boardTab").classList.remove("new"); break;
-    case "a": state.bubbles = !state.bubbles; applyToggles(); save(); break;
     case "n": ui.notes = !ui.notes; applyToggles(); break;
     case "p": openNotesView(); break;
     case "f": toggleFull(); break;
@@ -1217,14 +1195,14 @@ pageEl.addEventListener("click", function (e) {
   if ((el = t.closest(".mapbtn"))) { openStation(+el.getAttribute("data-i")); return; }
   if (t.closest(".backmap")) { closeStation(); return; }
   if (t.closest(".stampbtn")) { completeStation(); return; }
-  if ((el = t.closest(".opt")) && state.station >= 0 && state.stStep < 3) {
+  if ((el = t.closest(".opt")) && state.station >= 0 && state.stStep < ST_LAST) {
     var st = STATIONS[state.station], o = +el.getAttribute("data-o"), sel = optSel[state.station] || (optSel[state.station] = {});
     if (st.layout === "choice") { var was = sel[o]; optSel[state.station] = {}; if (!was) optSel[state.station][o] = true; }
     else sel[o] = !sel[o];
     HOOKS.map(state.stStep); return;
   }
   if ((el = t.closest(".ox"))) { var q = el.getAttribute("data-q"), v = el.getAttribute("data-v"); oxSel[q] = oxSel[q] === v ? null : v; HOOKS.quiz(state.step); return; }
-  if (cur().id === "form" && state.step === 5) {
+  if (cur().id === "form" && state.step === SORT_STEP) {
     if (t.closest("#btnCheck")) { checkSort(); return; }
     if (t.closest("#btnShuffle")) { resetSort(); return; }
     if (t.closest(".card")) return;
