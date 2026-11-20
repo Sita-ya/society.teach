@@ -306,6 +306,74 @@ body.notes #viewport{display:none}
   #notesView .tools{display:none}
   thead{display:table-header-group}
 }
+
+/* ---------- 新增：情境小遊戲（第 3 頁） ---------- */
+.sit{background:#fff;border:2px solid var(--brick);border-radius:18px;padding:14px 22px}
+.sit .st-t{display:inline-block;background:var(--brick);color:#fff;font-size:22px;border-radius:8px;padding:2px 12px;letter-spacing:2px;margin-bottom:6px}
+.sit .st-q{font-size:30px;font-weight:700;line-height:1.4}
+.sopts{margin-top:10px}
+.sopt{display:flex;align-items:center;background:var(--g5);border:2px solid var(--g4);border-radius:14px;padding:8px 18px;font-size:28px;margin-bottom:10px;cursor:pointer;user-select:none;transition:background .2s,border-color .2s,opacity .2s}
+.sopt:hover{border-color:var(--g2)}
+.sopt .ic{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid var(--g3);font-size:24px;font-weight:700;color:var(--g1);display:flex;align-items:center;justify-content:center;margin-right:14px}
+.sopt.ok{background:var(--ok-l);border-color:var(--ok);color:var(--ok);font-weight:700;animation:pop 380ms ease-out}
+.sopt.ok .ic{border-color:var(--ok);color:var(--ok)}
+.sopt.no{border-color:var(--bad);animation:shake 420ms}
+.sopt.dim{opacity:.35}
+.sfb{min-height:46px;font-size:26px;line-height:1.4;color:var(--g1)}
+.sfb.ok{color:var(--ok);font-weight:700}
+.sfb.no{color:var(--bad)}
+.sfb .hi{display:inline-block;font-size:20px;border:1.5px solid currentColor;border-radius:6px;padding:0 8px;margin-right:8px;vertical-align:middle}
+/* ---------- 新增：時空穿越機（第 4 頁） ---------- */
+.cd{display:inline-block;min-width:120px;text-align:center;background:var(--indigo);color:#fff;font-weight:700;font-size:34px;border-radius:12px;padding:0 16px;margin-left:18px;vertical-align:middle}
+.cd.up{background:var(--bad)}
+.fig.ovf .imgbox{overflow:visible}
+.fig.ovf .imgbox img{border-radius:12px}
+.fd{position:absolute;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;border:6px solid var(--brick);z-index:2}
+.fd.same{border-color:var(--indigo)}
+.fd:after{content:"";position:absolute;left:-14px;top:-14px;width:166px;height:166px;border-radius:50%;border:3px solid;border-color:inherit;opacity:.6;animation:ring 1.6s ease-out infinite}
+.fd .fl{position:absolute;top:152px;left:50%;width:240px;margin-left:-120px;text-align:center}
+.fd .fl span{display:inline-block;background:var(--brick);color:#fff;font-size:24px;font-weight:700;border-radius:8px;padding:2px 12px;white-space:nowrap}
+.fd.same .fl span{background:var(--indigo)}
+.hs.gray{background:#fff;color:var(--g2);border:4px solid var(--g3)}
+.hs.gray:after{display:none}
+.boss-t{font-size:34px;font-weight:700;color:var(--brick)}
+.boss-s{font-size:24px;color:var(--g2);margin-bottom:6px}
+.bcard{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:10px 18px;margin-bottom:12px}
+.bcard .bl{display:inline-block;background:var(--g2);color:#fff;font-size:20px;border-radius:6px;padding:0 10px;margin-bottom:4px}
+.bcard .bq{font-size:27px;line-height:1.4}
+.bcard .ba{font-size:28px;font-weight:700;color:var(--brick);margin-top:4px}
+/* ---------- 新增：十字方格表（第 5 頁） ---------- */
+.cross{position:absolute;left:0;top:0;width:1760px;height:700px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;grid-column-gap:180px;grid-row-gap:22px}
+.cq{position:relative;background:#fff;border:2px solid var(--line);border-radius:20px;padding:22px 30px;cursor:pointer;user-select:none;transition:border-color .25s,background .25s}
+.cq:hover{border-color:var(--g2)}
+.cq .cn2{display:inline-block;width:46px;height:46px;border-radius:50%;background:var(--g4);color:var(--g1);font-weight:700;font-size:26px;text-align:center;line-height:46px;margin-right:14px;vertical-align:middle}
+.cq .ch{font-size:36px;font-weight:700;vertical-align:middle}
+.cq .cl{position:absolute;right:22px;top:24px;font-size:20px;color:var(--g2)}
+.cq .chint,.cq .cans{display:none;margin-top:14px}
+.cq .chint{font-size:28px;color:var(--indigo);background:var(--indigo-l);border-radius:12px;padding:8px 16px}
+.cq .chint:before{content:"想一想";font-size:20px;background:var(--indigo);color:#fff;border-radius:6px;padding:1px 8px;margin-right:10px;vertical-align:middle}
+.cq .cans{font-size:32px;font-weight:700;line-height:1.45}
+.cq.l1 .chint{display:block;animation:pop 380ms ease-out}
+.cq.l2 .chint{display:block;opacity:.55}
+.cq.l2 .cans{display:block;animation:pop 380ms ease-out}
+.cq.l2{border-color:var(--brick);background:#FFFCFA}
+.cq.l2 .cn2{background:var(--brick);color:#fff}
+.ccenter{position:absolute;left:50%;top:350px;width:160px;height:160px;margin:-80px 0 0 -80px;border-radius:50%;background:var(--brick);color:#fff;
+  font-size:44px;font-weight:700;letter-spacing:4px;display:flex;align-items:center;justify-content:center;z-index:3;border:none}
+.csum{position:absolute;left:0;top:724px;width:1760px;text-align:center;font-size:32px;background:var(--brick-l);border:2px solid var(--brick);border-radius:18px;padding:12px 24px}
+/* ---------- 新增：連連看（第 6 頁） ---------- */
+.match{position:absolute;left:180px;top:130px;width:1400px;height:520px}
+.match svg.mlines{position:absolute;left:0;top:0;width:1400px;height:520px;pointer-events:none}
+.mcol{position:absolute;top:0;width:420px}
+.mcol.l{left:0} .mcol.r{right:0}
+.mi{height:100px;margin-bottom:40px;border:2.5px solid var(--brick);border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;color:var(--brick);cursor:pointer;user-select:none;position:relative;transition:background .2s,color .2s}
+.mcol.r .mi{border-color:var(--indigo);color:var(--indigo);font-size:30px}
+.mi:after{content:"";position:absolute;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:50%;background:currentColor}
+.mcol.l .mi:after{right:-11px} .mcol.r .mi:after{left:-11px}
+.mi.sel{background:var(--brick);color:#fff;transform:translateY(-4px)}
+.mi.sel:after{background:var(--brick)}
+.mi.done{border-color:var(--ok);color:var(--ok);background:var(--ok-l)}
+.mi.bad{border-color:var(--bad);animation:shake 420ms}
 </style>
 </head>
 <body>
@@ -332,12 +400,24 @@ body.notes #viewport{display:none}
 
 /* 圖片上標記的位置（百分比，相對於圖片本身）。要微調位置只改這裡。 */
 var HOTSPOTS = {
-  // 第 4 頁「街屋大解剖」：img/shophouse.png 上的三個編號
+  // 第 4 頁「我是老街小老闆」：img/shophouse.png 上的三個編號
   shophouse: [
-    { n: 1, left: 45, top: 62 },   // ① 店面與騎樓
-    { n: 2, left: 12, top: 70 },   // ② 後方
-    { n: 3, left: 15, top: 35 }    // ③ 樓上
+    { n: 1, left: 31, top: 72 },   // ① 騎樓
+    { n: 2, left: 45, top: 56 },   // ② 一樓店面（朝向街道）
+    { n: 3, left: 15, top: 38 }    // ③ 店鋪後方或樓上
   ],
+  // 第 4 頁「時空大家來找碴」：兩張圖上的發光圈圈
+  findDiff: {
+    early: [   // img/early-market.png
+      { left: 70, top: 36, kind: "same", label: "沒變：廟宇" },
+      { left: 26, top: 42, kind: "diff", label: "改變 1：攤販" }
+    ],
+    shop: [    // img/shophouse.png
+      { left: 90, top: 46, kind: "same", label: "沒變：廟宇" },
+      { left: 46, top: 52, kind: "diff", label: "改變 1：店面" },
+      { left: 17, top: 44, kind: "diff", label: "改變 2：樓上住家" }
+    ]
+  },
   // 第 2 頁「三峽老街導覽地圖」上 4 個站點按鈕的位置（相對於地圖）
   map: [
     { left: 35.6, top: 53.8 },     // ① 騎樓與牌樓
@@ -389,8 +469,8 @@ var STATIONS = [
     ],
     board: "金牛角麵包",
     focus: "金牛角：名稱由來（形狀、顏色）、伴手禮、開發新口味",
-    qs: [["這個麵包為什麼叫做「金牛角」？", "推理"], ["如果你是老街店家，你會開發什麼新口味？", "評鑑"]],
-    notes: "「如果你是老街店家，你會開發什麼新口味？」<b>只讓一位學生快速回答</b>，控制時間。"
+    qs: [["這個麵包為什麼叫做「金牛角」？", "推理"], ["你去過的其他老街（大溪、鹿港、旗山），建築和三峽很像，但賣的東西一樣嗎？為什麼？", "推理"]],
+    notes: "遷移比較：「你去過的其他老街，例如<b>大溪、鹿港、旗山</b>，房子和三峽很像，但<b>賣的東西</b>一樣嗎？為什麼？」引導說出：<b>各地名產會因為家鄉特產而不同</b>。<b>只讓一位學生快速回答</b>，控制時間。"
   },
   { key: "b4", name: "藍染", cat: "產業", stamp: "產業", layout: "multi",
     image: "indigo.png",
@@ -426,7 +506,7 @@ var LESSON = [
     mission: "今天，大家要當「三峽老街小小導覽員」！集滿 4 個印章，就能完成導覽任務！",
     focus: "觀察三峽老街街景（紅磚、連續拱門、騎樓），引發興趣並建立導覽任務",
     qs: [["這條街，和你家附近的街道有什麼不一樣？", "理解"]],
-    notes: "問完停 3 秒、環視全班。「請第三組的<b>小華</b>說說看……嗯，你觀察得很仔細，房子比較舊。還有呢？第一組的<b>小美</b>？」讚美觀察力，順便幫第三組、第一組加分（按 3、1）。"
+    notes: "問完停 3 秒、環視全班。「請第三組的<b>小華</b>說說看……嗯，你觀察得很仔細，房子比較舊。還有呢？第一組的<b>小美</b>？」讚美觀察力，順便幫第三組、第一組加分（按 3、1）。揭曉三峽老街後可追問：「<b>有誰去過老街？和這裡有什麼一樣、不一樣？</b>」（呼應課前請學生帶老街照片）"
   },
   { id: "map", type: "map", stage: 2, label: "發展活動一", header: "三峽老街導覽地圖", steps: 0,
     timer: { name: "發展一", from: 120, to: 390 },
@@ -439,51 +519,74 @@ var LESSON = [
     image: "early-market.png", cap: "圖 1　早期市集示意圖",
     question: "家鄉的老街，是怎麼形成的？",
     guide: "回想一下祖師廟。以前的小販，為什麼喜歡到廟的附近做生意？",
+    // 情境小遊戲：點選後立即回饋；選錯給「鷹架提示」，不直接給答案
+    situation: { title: "情境任務", q: "假如你是兩百年前的小販，想讓東西賣得最好，你會把攤子擺在哪裡？",
+      opts: [
+        ["安靜的山坡上", "no", "山坡上很安靜……會有很多人經過嗎？再想想！"],
+        ["祖師廟前的廣場", "ok", "沒錯！來拜拜的人很多——人潮帶來錢潮，東西就比較好賣！"],
+        ["稻田的正中間", "no", "田裡的人都在忙著工作，會有空來買東西嗎？"]
+      ] },
     wiki: "<b>市集</b>：在固定的時間、地點，進行貨物買賣的場所。",
     cards: ["老街", "廟宇", "市集／商店街", "人潮聚集"],   // 卡片打亂後的順序
     order: [1, 3, 2, 0],                                     // 正確順序（對應上面 cards 的編號）
     explain: "家鄉發展的過程中，<b class='hl'>廟宇</b>是人們常常聚集的地方，吸引商人、小販到廟宇附近做買賣，形成<b class='hl'>市集或商店街</b>；其中一部分慢慢演變成現在的<b class='hl'>老街</b>。",
     sanxia: "三峽也是這樣！祖師廟附近的<b>三角湧街</b>，就是三峽早期的市集中心，後來成為今天的<b>三峽老街</b>。",
     focus: "老街的形成：廟宇 → 人潮聚集 → 市集／商店街 → 老街；認識「市集」",
-    qs: [["家鄉的老街，是怎麼形成的？（課本 p.64 課前預習）", "理解"], ["以前的小販，為什麼喜歡到廟的附近做生意？", "推理"], ["排序挑戰：把老街形成的過程排出來", "推理"]],
-    notes: "學生回答後複述：「對！拜拜的人多，東西就好賣。」排序挑戰：「請第二組的<b>小強</b>上台排排看。」老師自己拖曳，<b>故意先把「老街」放第一格</b>，按「檢查答案」後引導：「最早出現的是什麼？我們剛剛去的祖師廟在哪裡？」再修正。正解出現後全班一起念。"
+    qs: [["家鄉的老街，是怎麼形成的？（課本 p.64 課前預習）", "理解"], ["情境任務：假如你是兩百年前的小販，會把攤子擺在哪裡？為什麼？", "推理"], ["排序挑戰：把老街形成的過程排出來", "推理"]],
+    notes: "情境任務：先請一位學生選，<b>若選錯就念畫面上的提示再追問</b>（鷹架），不要直接給答案；選對後複述：「對！拜拜的人多，東西就好賣。」排序挑戰：「請第二組的<b>小強</b>上台排排看。」老師自己拖曳，<b>故意先把「老街」放第一格</b>，按「檢查答案」後引導：「最早出現的是什麼？我們剛剛去的祖師廟在哪裡？」再修正。正解出現後全班一起念。"
   },
-  { id: "house", type: "house", stage: 2, label: "發展活動三", header: "從市集到街屋", steps: 7,
+  { id: "house", type: "house", stage: 2, label: "發展活動三", header: "時空穿越機｜從市集到街屋", steps: 13,
     timer: { name: "發展三", from: 570, to: 780 },
     q1: "觀察圖 1 和圖 2，有哪些相同的地方？有哪些不同的地方？",
+    findTask: "時空大家來找碴：30 秒內找出：<b style='color:var(--indigo)'>1 個沒變</b>的地方、<b class='hl'>2 個改變</b>的地方！",
     same: "<b>廟宇</b>一直都在。",
-    diff: "早期是<b>攤販</b>，後來變成<b>住家和店面兼具的街屋</b>。",
-    q2: "以前老街的老闆一家人，住在哪裡？",
-    parts: [
-      ["店面與騎樓", "店面朝向街道做生意；騎樓讓顧客、行人遮陽避雨"],
-      ["後方", "店家生活起居的地方"],
-      ["樓上", "店家休息的地方"]
+    diff: "<b>攤販</b>變成固定的<b>店面</b>；店家也住在裡面，成為<b>住家和店面兼具的街屋</b>。",
+    // 我是老街小老闆：[情境, 答案]；答案前的編號對應 HOTSPOTS.shophouse
+    boss: [
+      ["下雨天，客人想買東西卻沒帶傘，可以走在哪裡？", "① 騎樓：供顧客、行人遮陽避雨"],
+      ["客人要進來挑貨、付錢，要去哪裡？", "② 一樓店面：朝向街道做生意"],
+      ["打烊了，老闆一家人要去哪裡吃飯、睡覺？", "③ 店鋪後方或樓上：生活起居的地方"]
     ],
-    sum: "前面做生意，後面和樓上生活",
+    bossQ: "所以，一棟老街的房子同時有哪兩種功用？",
+    sum: "做生意＋住家：前面做生意，後面和樓上生活",
     sumSub: "店鋪沿著道路兩旁蓋，老街是各種貨物交易的地方，顧客往來絡繹不絕。",
     q3: "觀察圖 2 街屋空間示意圖中的街屋空間，和現在的建築有什麼不同？",
     table: [["樓層不多", "樓層比較多"], ["紅磚砌成", "多是鋼筋水泥"], ["有藝術雕刻", "線條比較簡單"]],
-    focus: "比較早期市集與街屋；街屋空間「前店後住、樓上休息」；比較以前街屋與現在建築",
-    qs: [["課本提問 1：觀察圖 1 和圖 2，有哪些相同、哪些不同？", "推理"], ["以前老街的老闆一家人，住在哪裡？", "理解"], ["課本提問 2：圖 2 的街屋和現在的建築有什麼不同？", "推理"]],
-    notes: "先說相同、再說不同。街屋大解剖逐一指 ①②③，請全班一起說「<b>前面做生意，後面和樓上生活</b>」。若時間不夠，第三部分只念參考答案帶過，<b>本頁要在 13:00 前結束</b>。"
+    focus: "大家來找碴：比較早期市集與街屋；我是老街小老闆：騎樓、一樓店面、後方或樓上的功能；比較以前街屋與現在建築",
+    qs: [["課本提問 1（大家來找碴）：觀察圖 1 和圖 2，有哪些相同、哪些不同？", "推理"],
+         ["我是老街小老闆：下雨天客人去哪裡？挑貨付錢去哪裡？打烊後老闆一家去哪裡？", "理解"],
+         ["一棟老街的房子同時有哪兩種功用？", "理解"],
+         ["課本提問 2：圖 2 的街屋和現在的建築有什麼不同？", "推理"]],
+    notes: "<b>大家來找碴</b>：「偵探們，穿越時空了！30 秒內找出 1 個沒變、2 個改變的地方！」倒數結束後追問：「哪一座建築一直都在原地沒搬家？」「以前搭帳篷擺攤的小販，後來變成什麼？」再按下一步出現發光圈圈。<b>我是老街小老闆</b>：每個情境念完，請全班「<b>用手比 1、2、3</b>」，掃視後再揭曉。最後問：「一棟房子同時有哪兩種功用？」請全班一起說「<b>做生意＋住家</b>」。若時間不夠，第三部分只念參考答案帶過，<b>本頁要在 13:00 前結束</b>。"
   },
-  { id: "summary", type: "summary", stage: 3, label: "綜合活動", header: "板書總結｜老街與生活", steps: 3,
+  { id: "summary", type: "summary", stage: 3, label: "綜合活動", header: "重點整理｜老街十字方格表", steps: 9,
     timer: { name: "綜合一", from: 780, to: 840 },
-    focus: "以板書概念圖統整：老街形成、街屋空間、三峽老街特色",
-    qs: [],
-    notes: "「我們來看今天的板書。」依序高亮三大區塊。請<b>全班一起念</b>：「廟宇 → 人潮聚集 → 市集／商店街 → 老街」。"
+    // 每格兩層：先出「想一想」提示（鷹架），再出答案；也可以直接用滑鼠點格子
+    cross: [
+      ["老街與廟宇的關係", "小販為什麼喜歡到廟前做生意？", "廟宇聚集人潮 → 市集、商店街 → 今日的老街"],
+      ["老街的主要功能", "大家到老街都在做什麼？", "各種貨物<b class='hl'>交易</b>的地方"],
+      ["老街的位置", "店鋪是沿著什麼蓋起來的？", "通常位在<b class='hl'>道路兩旁</b>"],
+      ["老街店鋪的型態", "店鋪前面做什麼？後面和樓上做什麼？", "店面朝向街道、多設<b class='hl'>騎樓</b>；後方是起居場所 → 兼具<b class='hl'>住家與商業</b>功能"]
+    ],
+    sum: "老街的形成常與<b class='hl'>廟宇聚集的人潮</b>及攤販有關；店鋪<b class='hl'>前面做買賣</b>，<b class='hl'>後方或樓上生活</b>。",
+    focus: "以十字方格表統整：老街與廟宇的關係、主要功能、位置、店鋪型態",
+    qs: [["老街和廟宇有什麼關係？", "理解"], ["老街的主要功能是什麼？", "記憶"], ["老街通常在什麼位置？", "記憶"], ["老街的店鋪是什麼型態？", "理解"]],
+    notes: "「導覽員們，我們一起把今天學到的整理成十字方格表！」每格先出<b>「想一想」提示</b>，請學生搶答，再揭曉答案（也可以直接點格子）。最後請<b>全班一起念</b>底部的統整句。完整板書可按 B 查看。"
   },
   { id: "quiz", type: "quiz", stage: 3, label: "綜合活動", header: "導覽員認證快問快答", steps: 6,
     timer: { name: "綜合二", from: 840, to: 900 },
     q1: { text: "老街的形成常常和廟宇有關，因為廟宇是人們常聚集的地方。", ans: "O", why: "廟宇聚集人潮 → 小販來做生意 → 慢慢形成老街。" },
     q2: { image: "jincheng-arcade.png", text: "觀察圖 3，金城老街的店鋪設有騎樓，騎樓具有什麼樣的功能？",
           ans: "供顧客、行人遮陽避雨。", more: "不只三峽，金門的金城老街也有騎樓喔！" },
-    q3: { text: "以前三峽發展藍染，和三峽河、河運有關。", ans: "O", why: "三峽河可以漂洗、晒布；淡水河河運把布賣到萬華。" },
+    // 第 3 題：連連看（左邊依序配對右邊 pairs 的第 2 欄；右邊顯示順序由 rightOrder 決定）
+    q3: { title: "三峽老街導覽連連看",
+          pairs: [["祖師廟", "信仰與社會活動的中心"], ["金牛角", "有名的伴手禮特產"], ["藍染", "馬藍、三峽河、河運"], ["牌樓", "巴洛克式的華麗裝飾"]],
+          rightOrder: [2, 0, 3, 1] },
     finalTitle: "🎉 恭喜成為三峽老街小小導覽員！",
     homework: "問問家人：我們家鄉有沒有老街？那裡有什麼廟宇或特產？",
     focus: "形成性評量：老街與廟宇、騎樓功能（遷移到金城老街）、藍染與河運",
-    qs: [["是非：老街的形成常常和廟宇有關。", "記憶"], ["課本提問 3：金城老街的騎樓具有什麼功能？", "推理"], ["是非：三峽發展藍染和三峽河、河運有關。", "記憶"]],
-    notes: "「導覽員認證考試開始！<b>全班用手比 O 或 X，一、二、三！</b>」掃視全班：「大部分同學都比 O，很好！」第 2 題請一位學生回答。最後宣布各組分數、頒發皇冠，交代回家任務。"
+    qs: [["是非：老街的形成常常和廟宇有關。", "記憶"], ["課本提問 3：金城老街的騎樓具有什麼功能？", "推理"], ["連連看：祖師廟、金牛角、藍染、牌樓各有什麼特色？", "記憶"]],
+    notes: "「導覽員認證考試開始！<b>全班用手比 O 或 X，一、二、三！</b>」掃視全班：「大部分同學都比 O，很好！」第 2 題請一位學生回答。第 3 題連連看：請一組派代表上台（老師用滑鼠模擬：先點左邊、再點右邊），連錯時會抖動，請台下同學幫忙提示。最後宣布各組分數、頒發皇冠。結尾金句：「今天我們當了導覽員，發現老街不只是吃喝玩樂的地方，它更藏著祖先<b>因為信仰聚在一起、在騎樓下互相照顧</b>的生活智慧。」再交代回家任務。"
   },
   { id: "links", type: "links", stage: 0, label: "課後資源", header: "延伸學習｜影片與網站（需要網路）", steps: 0,
     timer: null,
@@ -527,6 +630,9 @@ var ui = { notes: false, modal: null, fresh: {} };
 var sortS = null;     // 第 3 頁排序遊戲狀態
 var optSel = {};      // 站點選項的選取
 var oxSel = {};
+var sitPick = null;   // 第 3 頁情境任務的選擇
+var crossLv = {};     // 第 5 頁十字方格表：用滑鼠點開的層級
+var matchS = null;    // 第 6 頁連連看狀態
 var scale = 1;
 
 // 每次開啟網頁都從封面重新開始：不保存進度，並清掉舊版本留下的紀錄
@@ -720,8 +826,8 @@ RENDER.form = function (P) {
     '<div class="ab scene" data-s="0" data-e="3" style="left:0;top:0;width:1760px;height:850px">' +
       fig(P.image, { style: "left:0;top:0;width:1000px;height:820px", cap: P.cap, s: 1, cls: "rv top" }) +
       '<div class="ab rv" data-s="1" style="left:1050px;top:0;width:710px">' + qhtml(P.question) + '<div class="hint" style="margin:6px 0 0 32px">課本 p.64 課前預習</div></div>' +
-      '<div class="ab rv" data-s="2" style="left:1050px;top:170px;width:710px">' + qhtml(P.guide, null, "sm") + '</div>' +
-      '<div class="ab rv pop wiki" data-s="3" style="left:1050px;top:380px;width:710px"><span class="wt">小百科</span><div class="wb">' + P.wiki + '</div></div>' +
+      '<div class="ab rv" data-s="2" style="left:1050px;top:150px;width:710px">' + sitHTML(P.situation) + '</div>' +
+      '<div class="ab rv pop wiki" data-s="3" style="left:1050px;top:640px;width:710px;padding:12px 24px"><span class="wt">小百科</span><div class="wb" style="font-size:30px">' + P.wiki + '</div></div>' +
     '</div>' +
     // 場景 B：步驟 5–7 排序挑戰
     '<div class="ab scene" data-s="4" data-e="6" style="left:0;top:0;width:1760px;height:850px">' +
@@ -738,37 +844,67 @@ RENDER.form = function (P) {
     '</div></div>';
 };
 
+function sitHTML(S) {
+  return '<div class="sit"><span class="st-t">' + S.title + '</span><div class="st-q">' + S.q + '</div>' +
+    '<div class="sopts">' + S.opts.map(function (o, i) { return '<div class="sopt" data-si="' + i + '"><span class="ic">' + "ABC"[i] + '</span>' + o[0] + '</div>'; }).join("") + '</div>' +
+    '<div class="sfb" id="sitFb"></div></div>';
+}
+function applySit(s) {
+  var P = LESSON[idx("form")], S = P.situation;
+  var pick = sitPick, okI = -1;
+  S.opts.forEach(function (o, i) { if (o[1] === "ok") okI = i; });
+  if (s >= 3) pick = okI;               // 下一步：直接顯示正解
+  var els = pageEl.querySelectorAll(".sopt"), fb = $("sitFb");
+  for (var i = 0; i < els.length; i++) {
+    els[i].className = "sopt" + (pick === i ? (i === okI ? " ok" : " no") : (pick === okI && pick !== null ? " dim" : ""));
+  }
+  if (!fb) return;
+  if (pick === null || pick < 0) { fb.className = "sfb"; fb.innerHTML = ""; return; }
+  var o = S.opts[pick];
+  fb.className = "sfb " + o[1];
+  fb.innerHTML = (o[1] === "ok" ? "" : '<span class="hi">提示</span>') + o[2];
+}
+
 RENDER.house = function (P) {
+  // 小老闆：3 個編號從步驟 4 起一直顯示（灰色），步驟 6、8、10 依序變紅（HOOKS.house 處理）
   var hs = HOTSPOTS.shophouse.map(function (h, i) {
-    return '<div class="hs rv" data-s="4" style="left:' + h.left + '%;top:' + h.top + '%;transition-delay:' + (i * 450) + 'ms">' + h.n + '</div>';
+    return '<div class="hs gray" data-bh="' + i + '" style="left:' + h.left + '%;top:' + h.top + '%">' + h.n + '</div>';
   }).join("");
-  var parts = P.parts.map(function (p, i) {
-    return '<div class="it rv" data-s="4" style="transition-delay:' + (i * 450) + 'ms"><span class="n">' + (i + 1) + '</span><div><b class="hl">' + p[0] + '</b>：' + p[1] + '</div></div>';
+  function circles(list) {
+    return list.map(function (c, i) {
+      return '<div class="fd ' + c.kind + ' rv pop" data-s="2" style="left:' + c.left + '%;top:' + c.top + '%;transition-delay:' + (i * 200) + 'ms"><div class="fl"><span>' + c.label + '</span></div></div>';
+    }).join("");
+  }
+  var cards = P.boss.map(function (b, i) {
+    return '<div class="bcard rv" data-s="' + (5 + 2 * i) + '"><span class="bl">情境 ' + (i + 1) + '</span><div class="bq">' + b[0] + '</div>' +
+      '<div class="ba rv pop" data-s="' + (6 + 2 * i) + '">' + b[1] + '</div></div>';
   }).join("");
   var rows = P.table.map(function (r) { return "<tr><td>" + r[0] + "</td><td>" + r[1] + "</td></tr>"; }).join("");
-  var badge = '<span class="badge">課本提問</span>';
+  var b1 = '<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 1</span>';
   return head(P) + '<div class="body">' +
-    // 第一部分
-    '<div class="ab scene" data-s="0" data-e="2" style="left:0;top:0;width:1760px;height:850px">' +
-      fig("early-market.png", { style: "left:0;top:0;width:860px;height:480px", cap: "圖 1　早期市集示意圖" }) +
-      fig("shophouse.png", { style: "left:900px;top:0;width:860px;height:480px", cap: "圖 2　老街的街屋空間示意圖" }) +
-      '<div class="ab rv" data-s="1" style="left:0;top:520px;width:1760px">' + qhtml('<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 1</span>' + P.q1) + '</div>' +
-      '<div class="ab rv cmp grid2" data-s="2" style="left:0;top:630px;width:1760px">' +
+    // 第一部分：時空大家來找碴（步驟 0–3）
+    '<div class="ab scene" data-s="0" data-e="3" style="left:0;top:0;width:1760px;height:850px">' +
+      fig("early-market.png", { style: "left:0;top:0;width:860px;height:480px", cap: "圖 1　早期市集示意圖", cls: "ovf", hs: circles(HOTSPOTS.findDiff.early) }) +
+      fig("shophouse.png", { style: "left:900px;top:0;width:860px;height:480px", cap: "圖 2　老街的街屋空間示意圖", cls: "ovf", hs: circles(HOTSPOTS.findDiff.shop) }) +
+      '<div class="ab rv" data-s="1" data-e="1" style="left:0;top:520px;width:1760px">' + qhtml(b1 + P.q1) + '</div>' +
+      '<div class="ab rv" data-s="1" data-e="1" style="left:0;top:604px;width:1760px;font-size:32px">' + P.findTask + '<span class="cd" id="cd">30</span></div>' +
+      '<div class="ab rv" data-s="2" data-e="3" style="left:0;top:530px;width:1760px">' + qhtml(b1 + P.q1, null, "sm") + '</div>' +
+      '<div class="ab rv cmp grid2" data-s="3" style="left:0;top:620px;width:1760px">' +
         '<div class="card-soft"><span class="ct" style="background:var(--indigo)">相同</span><div class="cb">' + P.same.replace(/<b>/g, "<b class='hl'>") + '</div></div>' +
         '<div class="card-soft"><span class="ct" style="background:var(--brick)">不同</span><div class="cb">' + P.diff.replace(/<b>/g, "<b class='hl'>") + '</div></div>' +
       '</div></div>' +
-    // 第二部分
-    '<div class="ab scene" data-s="3" data-e="5" style="left:0;top:0;width:1760px;height:850px">' +
+    // 第二部分：我是老街小老闆（步驟 4–11）
+    '<div class="ab scene" data-s="4" data-e="11" style="left:0;top:0;width:1760px;height:850px">' +
       fig("shophouse.png", { style: "left:0;top:0;width:1120px;height:600px", hs: hs, cls: "top" }) +
-      '<div class="ab rv" data-s="3" style="left:1160px;top:0;width:600px">' + qhtml(P.q2, null, "sm") + '</div>' +
-      '<div class="ab list3" style="left:1160px;top:170px;width:600px">' + parts + '</div>' +
-      '<div class="ab rv pop" data-s="5" style="left:0;top:640px;width:1760px;text-align:center"><div class="big-sum">' + P.sum + '</div><div style="font-size:30px;color:#5C5C5C;margin-top:6px">' + P.sumSub + '</div></div>' +
+      '<div class="ab" style="left:1160px;top:0;width:600px"><div class="boss-t">我是老街小老闆</div><div class="boss-s">聽情境，全班用手比 1、2、3！</div>' + cards + '</div>' +
+      '<div class="ab rv" data-s="11" style="left:0;top:625px;width:1120px">' + qhtml(P.bossQ, null, "sm") + '</div>' +
+      '<div class="ab rv pop" data-s="11" style="left:0;top:700px;width:1760px;text-align:center"><div class="big-sum" style="font-size:48px">' + P.sum + '</div><div style="font-size:28px;color:#5C5C5C;margin-top:4px">' + P.sumSub + '</div></div>' +
     '</div>' +
-    // 第三部分
-    '<div class="ab scene" data-s="6" data-e="7" style="left:0;top:0;width:1760px;height:850px">' +
-      '<div class="ab rv" data-s="6" style="left:0;top:0;width:1760px">' + qhtml('<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 2</span>' + P.q3, null, "sm") + '</div>' +
+    // 第三部分：和現在比一比（步驟 12–13）
+    '<div class="ab scene" data-s="12" data-e="13" style="left:0;top:0;width:1760px;height:850px">' +
+      '<div class="ab rv" data-s="12" style="left:0;top:0;width:1760px">' + qhtml('<span class="badge" style="margin:0 14px 0 0;font-size:22px">課本提問 2</span>' + P.q3, null, "sm") + '</div>' +
       fig("shophouse.png", { style: "left:0;top:130px;width:820px;height:560px", cap: "圖 2　老街的街屋空間示意圖" }) +
-      '<div class="ab rv pop" data-s="7" style="left:870px;top:160px;width:890px"><table class="cmpt"><tr><th>以前的街屋</th><th>現在的建築</th></tr>' + rows + '</table></div>' +
+      '<div class="ab rv pop" data-s="13" style="left:870px;top:160px;width:890px"><table class="cmpt"><tr><th>以前的街屋</th><th>現在的建築</th></tr>' + rows + '</table></div>' +
     '</div></div>';
 };
 
@@ -795,9 +931,12 @@ function boardHTML(f, big) {
 }
 
 RENDER.summary = function (P) {
-  var all = { form: 1, house: 1, b1: 1, b2: 1, b3: 1, b4: 1 };
-  return head(P, '板書總結｜<span style="color:var(--brick)">【老街與生活】</span>') +
-    '<div class="body"><div class="ab bigboard" id="bigboard" style="left:0;top:10px;width:1760px">' + boardHTML(all, true) + '</div></div>';
+  var cells = P.cross.map(function (c, i) {
+    return '<div class="cq" data-k="' + i + '"><span class="cn2">' + (i + 1) + '</span><span class="ch">' + c[0] + '</span><span class="cl">點一下看提示／答案</span>' +
+      '<div class="chint">' + c[1] + '</div><div class="cans">' + c[2] + '</div></div>';
+  }).join("");
+  return head(P) + '<div class="body"><div class="cross">' + cells + '</div><div class="ccenter">老街</div>' +
+    '<div class="ab rv pop csum" data-s="9">' + P.sum + '</div></div>';
 };
 
 RENDER.quiz = function (P) {
@@ -818,8 +957,13 @@ RENDER.quiz = function (P) {
       '<div class="ab" style="left:950px;top:0;width:810px"><div class="qno"><span class="badge" style="margin:0;font-size:22px">課本提問 3</span>　第 2 題</div>' + qhtml(q2.text) + '</div>' +
       '<div class="ab rv pop card-soft" data-s="3" style="left:950px;top:300px;width:810px;border-color:var(--ok);background:var(--ok-l)"><div style="font-size:38px;font-weight:700;color:var(--ok)">' + q2.ans + '</div><div style="font-size:30px;margin-top:10px">' + q2.more + '</div></div>' +
     '</div>' +
-    tf(P.q3, 3, 4) +
-    '<div class="ab scene" data-s="6" data-e="6"style="left:0;top:0;width:1760px;height:850px">' +
+    '<div class="ab scene" data-s="4" data-e="5" style="left:0;top:0;width:1760px;height:850px">' +
+      '<div class="qno" style="text-align:center;margin-top:10px">第 3 題｜連連看</div>' +
+      '<div class="tf" style="font-size:40px">' + P.q3.title + '：先點左邊，再點右邊配對！</div>' +
+      '<div class="match" id="match"></div>' +
+      '<div class="ab rv pop ans" data-s="5" style="left:0;top:700px;width:1760px">全部配對完成！<small>四個導覽站的重點，導覽員都記住了！</small></div>' +
+    '</div>' +
+    '<div class="ab scene" data-s="6" data-e="6" style="left:0;top:0;width:1760px;height:850px">' +
       '<div class="final-t pop on" style="margin-top:10px">' + P.finalTitle + '</div>' +
       '<div class="ab scores" id="finalScores" style="left:120px;top:250px;width:1520px"></div>' +
       '<div class="ab homework" style="left:120px;top:640px;width:1520px"><span class="hl2">回家任務</span>' + P.homework + '</div>' +
@@ -854,20 +998,44 @@ HOOKS.map = function (s) {
   }
 };
 HOOKS.form = function (s) {
+  applySit(s);
   if (s >= 5 && !sortS.revealed) { sortS.revealed = true; sortS.slots = LESSON[state.page].order.slice(); sortS.pool = []; sortS.marks = ["lit", "lit", "lit", "lit"]; sortS.sel = null; renderSort(true); }
   else if (s < 5 && sortS.revealed) { resetSort(); }
   if (s >= 5) addBoard("form");
 };
-HOOKS.house = function (s) { if (s >= 5) addBoard("house"); };
+HOOKS.house = function (s) {
+  // 找碴倒數：只在步驟 1 運作；離開就停，回到步驟 1 從 30 重新開始
+  if (s === 1) { if (!cdTimer) startCountdown(); } else stopCountdown();
+  // 小老闆編號：步驟 6、8、10 依序由灰變紅
+  var bh = pageEl.querySelectorAll(".hs[data-bh]");
+  for (var i = 0; i < bh.length; i++) {
+    var lit = s >= 6 + 2 * (+bh[i].getAttribute("data-bh"));
+    bh[i].className = "hs" + (lit ? " pop on" : " gray");
+  }
+  if (s >= 11) addBoard("house");
+};
+var cdTimer = null, cdLeft = 30;
+function startCountdown() {
+  stopCountdown(); cdLeft = 30; drawCountdown();
+  cdTimer = setInterval(function () { cdLeft--; drawCountdown(); if (cdLeft <= 0) { clearInterval(cdTimer); cdTimer = -1; } }, 1000);
+}
+function stopCountdown() { if (cdTimer && cdTimer !== -1) clearInterval(cdTimer); cdTimer = null; }
+function drawCountdown() {
+  var el = $("cd"); if (!el) return;
+  el.textContent = cdLeft > 0 ? cdLeft : "時間到！";
+  el.className = "cd" + (cdLeft > 0 ? "" : " up");
+}
 HOOKS.summary = function (s) {
-  var bb = $("bigboard"); if (!bb) return;
-  bb.classList.toggle("hiliting", s > 0);
-  var blks = bb.querySelectorAll(".bd-blk");
-  for (var i = 0; i < blks.length; i++) blks[i].classList.toggle("hi", +blks[i].getAttribute("data-blk") === s);
+  var cs = pageEl.querySelectorAll(".cq");
+  for (var i = 0; i < cs.length; i++) {
+    var lv = Math.max(0, Math.min(2, s - 2 * i));   // 步驟 1、2 → 第 1 格提示、答案；步驟 3、4 → 第 2 格……
+    lv = Math.max(lv, crossLv[i] || 0);
+    cs[i].className = "cq" + (lv ? " l" + lv : "");
+  }
 };
 HOOKS.quiz = function (s) {
   var P = cur();
-  [[1, P.q1, 1], [3, P.q3, 5]].forEach(function (a) {
+  [[1, P.q1, 1]].forEach(function (a) {
     var cards = pageEl.querySelectorAll('.ox[data-q="' + a[0] + '"]');
     for (var i = 0; i < cards.length; i++) {
       var c = cards[i], v = c.getAttribute("data-v");
@@ -876,8 +1044,38 @@ HOOKS.quiz = function (s) {
       c.classList.toggle("dim", s >= a[2] && v !== a[1].ans);
     }
   });
+  if (s >= 4 && s <= 5) { if (!matchS) resetMatch(); if (s >= 5) { matchS.done = [0, 1, 2, 3]; matchS.sel = null; } renderMatch(); }
   if (s >= 6) renderFinalScores();
 };
+
+/* ---------- 第 6 頁：連連看 ---------- */
+function resetMatch() { matchS = { sel: null, done: [], bad: null }; }
+function renderMatch() {
+  var box = $("match"); if (!box) return;
+  var Q = cur().q3, H = 140, top0 = 50;
+  var L = Q.pairs.map(function (p, i) {
+    var d = matchS.done.indexOf(i) >= 0;
+    return '<div class="mi' + (d ? " done" : "") + (matchS.sel === i ? " sel" : "") + (matchS.bad && matchS.bad[0] === i ? " bad" : "") + '" data-ml="' + i + '">' + p[0] + '</div>';
+  }).join("");
+  var R = Q.rightOrder.map(function (pi) {
+    var d = matchS.done.indexOf(pi) >= 0;
+    return '<div class="mi' + (d ? " done" : "") + (matchS.bad && matchS.bad[1] === pi ? " bad" : "") + '" data-mr="' + pi + '">' + Q.pairs[pi][1] + '</div>';
+  }).join("");
+  var lines = matchS.done.map(function (pi) {
+    var y1 = top0 + pi * H, y2 = top0 + Q.rightOrder.indexOf(pi) * H;
+    return '<line x1="431" y1="' + y1 + '" x2="969" y2="' + y2 + '" stroke="#3F7D58" stroke-width="7" stroke-linecap="round"/>';
+  }).join("");
+  box.innerHTML = '<svg class="mlines" viewBox="0 0 1400 520">' + lines + '</svg><div class="mcol l">' + L + '</div><div class="mcol r">' + R + '</div>';
+}
+function clickMatch(el) {
+  if (!matchS || state.step !== 4) return;
+  var l = el.getAttribute("data-ml"), r = el.getAttribute("data-mr");
+  if (l !== null) { l = +l; if (matchS.done.indexOf(l) < 0) matchS.sel = matchS.sel === l ? null : l; matchS.bad = null; renderMatch(); return; }
+  r = +r;
+  if (matchS.sel === null || matchS.done.indexOf(r) >= 0) return;
+  if (r === matchS.sel) { matchS.done.push(r); matchS.sel = null; matchS.bad = null; renderMatch(); if (matchS.done.length === 4) toast("全部配對正確！"); }
+  else { matchS.bad = [matchS.sel, r]; renderMatch(); setTimeout(function () { matchS.bad = null; matchS.sel = null; renderMatch(); }, 600); }
+}
 function renderFinalScores() {
   var el = $("finalScores"); if (!el) return;
   var mx = Math.max.apply(null, state.scores);
@@ -990,6 +1188,8 @@ document.addEventListener("mouseup", function (e) {
    ===================================================================== */
 function renderPage() {
   var P = cur();
+  if (P.type === "quiz" && state.step < 4) matchS = null;
+  stopCountdown();
   pageEl.innerHTML = RENDER[P.type](P);
   if (P.type === "form") resetSort();
   applySteps();
@@ -1069,6 +1269,9 @@ function goPage(i, last) {
   if (i >= 1 && !state.tStart && state.page === 0) state.tStart = Date.now();
   state.page = i; state.station = -1; state.stStep = 0;
   state.step = last ? LESSON[i].steps : 0;
+  if (LESSON[i].type === "summary") crossLv = {};
+  if (LESSON[i].type === "form") sitPick = null;
+  if (LESSON[i].type === "quiz") matchS = null;
   if (LESSON[i].type === "summary") { ["form", "house", "b1", "b2", "b3", "b4"].forEach(function (k) { state.flags[k] = true; }); renderBoard(); $("board").classList.remove("open"); }
   renderPage();
 }
@@ -1121,7 +1324,7 @@ function askReset() {
 }
 function doReset() {
   closeModal();
-  state = defaultState(); optSel = {}; oxSel = {}; ui.notes = false;
+  state = defaultState(); optSel = {}; oxSel = {}; sitPick = null; crossLv = {}; matchS = null; ui.notes = false;
   $("board").classList.remove("open"); $("boardTab").classList.remove("new");
   renderAll(); toast("已重置");
 }
@@ -1154,7 +1357,7 @@ function buildNotesView() {
   $("notesView").innerHTML =
     '<div class="tools"><button onclick="window.print()">列印（A4 直式）</button><button onclick="closeNotesView()">回到上課畫面（Esc）</button></div>' +
     '<h1>老街與生活｜15 分鐘試教講稿總表</h1><div class="meta">康軒社會四上 第三單元 第 2 課（課本 p.62–65）</div>' +
-    '<div class="flow"><div><b>引起動機</b> 0:00–2:00（2 分）<br>找不同：三峽老街街景</div><div><b>發展活動</b> 2:00–13:00（11 分）<br>導覽地圖 4 站／老街形成／街屋空間</div><div><b>綜合活動</b> 13:00–15:00（2 分）<br>板書總結／快問快答</div></div>' +
+    '<div class="flow"><div><b>引起動機</b> 0:00–2:00（2 分）<br>找不同：三峽老街街景</div><div><b>發展活動</b> 2:00–13:00（11 分）<br>導覽地圖 4 站／情境任務＋排序／大家來找碴＋小老闆</div><div><b>綜合活動</b> 13:00–15:00（2 分）<br>十字方格表／快問快答（含連連看）</div></div>' +
     '<table><thead><tr><th style="width:11%">頁次</th><th style="width:8%">階段</th><th style="width:9%">建議時間</th><th style="width:19%">教學重點</th><th style="width:25%">提問（層次）</th><th>教師提示</th></tr></thead><tbody>' + rows + '</tbody></table>';
 }
 function openNotesView() { buildNotesView(); document.body.classList.add("notes"); ui.notesView = true; if (location.hash !== "#notes") { try { history.replaceState(null, "", "#notes"); } catch (e) { location.hash = "notes"; } } }
@@ -1203,6 +1406,9 @@ pageEl.addEventListener("click", function (e) {
     else sel[o] = !sel[o];
     HOOKS.map(state.stStep); return;
   }
+  if ((el = t.closest(".sopt")) && cur().id === "form" && state.step === 2) { sitPick = +el.getAttribute("data-si"); applySit(state.step); return; }
+  if ((el = t.closest(".cq")) && cur().type === "summary") { var k = +el.getAttribute("data-k"); var now = /l2/.test(el.className) ? 2 : (/l1/.test(el.className) ? 1 : 0); crossLv[k] = Math.min(2, now + 1); HOOKS.summary(state.step); return; }
+  if ((el = t.closest(".mi")) && cur().type === "quiz") { clickMatch(el); return; }
   if ((el = t.closest(".ox"))) { var q = el.getAttribute("data-q"), v = el.getAttribute("data-v"); oxSel[q] = oxSel[q] === v ? null : v; HOOKS.quiz(state.step); return; }
   if (cur().id === "form" && state.step === SORT_STEP) {
     if (t.closest("#btnCheck")) { checkSort(); return; }
