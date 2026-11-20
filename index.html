@@ -529,7 +529,9 @@ var optSel = {};      // 站點選項的選取
 var oxSel = {};
 var scale = 1;
 
-function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {} }
+// 每次開啟網頁都從封面重新開始：不保存進度，並清掉舊版本留下的紀錄
+function save() {}
+try { localStorage.removeItem(STORE_KEY); } catch (e) {}
 function load() {
   try {
     var raw = localStorage.getItem(STORE_KEY);
@@ -1234,7 +1236,6 @@ function fit() {
 window.addEventListener("resize", fit);
 
 /* ---------- 啟動 ---------- */
-load();
 fit();
 renderAll();
 if (location.hash === "#notes") openNotesView();
